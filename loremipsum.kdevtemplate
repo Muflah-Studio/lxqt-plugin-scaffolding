@@ -1,0 +1,5 @@
+[General]
+Name=LXQt Plugin Boilerplate
+Comment=Developing LXQt plugin made easy
+ShowFilesAfterGeneration=CMakeLists.txt
+Category=Qt/Graphical
