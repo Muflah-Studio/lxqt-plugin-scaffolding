@@ -37,6 +37,20 @@ Save to `panel.conf` and run with:
 lxqt-panel --configfile panel.conf
 ```
 
+## Use it with Kdevelop
+
+The Kdevelop template files is in branch [main](./tree/main).
+From there, make a tarball to be used for Kdevelop template choice.
+```
+git switch main
+git archive --format=tar --prefix=./ main | bzip2 > ../cmake_lxqtplugin.tar.bz2
+```
+
+Then just copy `cmake_lxqtplugin.tar.bz2` to `~/.local/share/kdevappwizard/templates`.
+Or download from Opendesktop.org repository when creating Project > *New from Template...* in Kdevelop.
+
+![](resources/kdevelop.png)
+
 ## License
 
 <one line to give the program's name and a brief idea of what it does.>
