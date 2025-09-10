@@ -2,28 +2,28 @@
 // SPDX-FileCopyrightText: 2025 <copyright holder> <email addr>
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-#include "lxqtloremipsum.h"
-#include "loremipsumbutton.h"
+#include "%{APPNAMELC}.h"
+#include "%{APPNAMELC}button.h"
 
 #include <QDebug>
 
-LoremIpsum::LoremIpsum(const ILXQtPanelPluginStartupInfo &startupInfo)
+%{APPNAMEID}::%{APPNAMEID}(const ILXQtPanelPluginStartupInfo &startupInfo)
     : QObject(), ILXQtPanelPlugin(startupInfo)
 {
     // Create a simple label to display some text
-    blabel = new LoremIpsumButton(this);
+    blabel = new %{APPNAMEID}Button(this);
     QString btext = QStringLiteral("Hello, Plugin!");
     blabel->setText(btext);
 
     settingsChanged();
 }
 
-LoremIpsum::~LoremIpsum() {
+%{APPNAMEID}::~%{APPNAMEID}() {
     delete blabel;
 };
 
 
-QWidget *LoremIpsum::widget()
+QWidget *%{APPNAMEID}::widget()
 {
    return blabel;
 }

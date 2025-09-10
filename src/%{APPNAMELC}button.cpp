@@ -2,10 +2,10 @@
 // SPDX-FileCopyrightText: 2025 <copyright holder> <email>
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-#include "loremipsumbutton.h"
+#include "%{APPNAMELC}button.h"
 #include "lxqt/ilxqtpanelplugin.h"
 
-LoremIpsumButton::LoremIpsumButton(ILXQtPanelPlugin *plugin, QWidget *parent) :
+%{APPNAMEID}Button::%{APPNAMEID}Button(ILXQtPanelPlugin *plugin, QWidget *parent) :
     QToolButton(parent),
     mPlugin(plugin)
 {
@@ -13,5 +13,5 @@ LoremIpsumButton::LoremIpsumButton(ILXQtPanelPlugin *plugin, QWidget *parent) :
     update();
 }
 
-LoremIpsumButton::~LoremIpsumButton() {};
+%{APPNAMEID}Button::~%{APPNAMEID}Button() {};
 
